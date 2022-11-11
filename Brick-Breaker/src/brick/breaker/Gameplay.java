@@ -42,7 +42,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     public Gameplay(){
         
 //        CONSTRUCT THE MAP
-        map = new MapGenerator(4, 8);
+        map = new MapGenerator(4, 12);
 
         addKeyListener(this);
         setFocusable(true);
@@ -225,7 +225,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 playerX = 310;
                 score = 0;
                 totalBricks = 21;
-                map = new MapGenerator(4, 8);
+                map = new MapGenerator(4, 12);
                 
                 repaint();
             }

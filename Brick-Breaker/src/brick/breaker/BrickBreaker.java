@@ -5,6 +5,7 @@
 package brick.breaker;
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -27,7 +28,9 @@ public class BrickBreaker {
         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         obj.setBackground(Color.BLACK);
         obj.add(gamePlay);
-        
+        ImageIcon icon = new ImageIcon("icon.png");
+        obj.setIconImage(icon.getImage());
+
     }
     
 }
