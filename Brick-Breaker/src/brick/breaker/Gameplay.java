@@ -75,6 +75,26 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         timer.start();
+        
+        if(play){
+            ballposX += ballXdir;
+            ballposY += ballYdir;
+            
+            if(ballposX < 0){
+                ballXdir = -ballXdir;
+            }
+            
+            if(ballposX < 670){
+                ballXdir = -ballXdir;
+            }
+            
+            if(ballposY < 0){
+                ballYdir = -ballYdir;
+            }
+        }
+        
+        
+        
         repaint();
     }
     
