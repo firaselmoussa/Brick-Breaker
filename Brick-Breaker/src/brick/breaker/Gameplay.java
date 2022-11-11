@@ -118,7 +118,18 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         if(play){
             
 //          DETECTING BALL X PADDLE COLLISION
-            if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX, 550, 100, 8))){
+            if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX, 550, 30, 8))){
+                
+                ballYdir = -ballYdir;
+		ballXdir = -2;
+                
+            }else if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX + 70, 550, 30, 8))){
+                
+		ballYdir = -ballYdir;
+		ballXdir = ballXdir + 1;
+                
+            }else if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX + 30, 550, 40, 8))){
+            
                 ballYdir = -ballYdir;
             }
             
