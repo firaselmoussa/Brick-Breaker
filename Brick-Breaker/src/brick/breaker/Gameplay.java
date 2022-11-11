@@ -61,13 +61,23 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         g.setColor(Color.green);
         g.fillRect(playerX, 550, 100, 8);
         
-//      THE PADDLE
+//      THE BALL
         g.setColor(Color.yellow);
-        g.fillRect(ballposX, ballposY, 20, 20);
+        g.fillOval(ballposX, ballposY, 20, 20);
         
+        g.dispose();
         
     }
 
+    
+   
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        timer.start();
+        repaint();
+    }
+    
     @Override
     public void keyTyped(KeyEvent e) {}
     @Override
@@ -108,10 +118,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         playerX -=20;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
     
     
     
