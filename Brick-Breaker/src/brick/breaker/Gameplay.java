@@ -138,7 +138,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 for(int j = 0; j < map.map[0].length; j++){
                     if(map.map[i][j] > 0){
                         int brickX = j * map.brickWidth + 80;
-                        int brickY = i * map.brickWidth + 50;
+                        int brickY = i * map.brickHeight + 50;
                         int brickWidth = map.brickWidth;
                         int brickHeight = map.brickHeight;
                         
