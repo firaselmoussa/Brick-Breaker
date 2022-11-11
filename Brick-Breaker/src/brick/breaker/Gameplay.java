@@ -54,14 +54,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 
 //    GAME GRAPHICS
     public void paint(Graphics g){
-        
-//        DRAW THE MAP
-        map.draw((Graphics2D) g);
-                
 //      BACKGROUND
         g.setColor(Color.black);
         g.fillRect(1, 1, 692, 592);
         
+//      DRAW THE MAP
+        map.draw((Graphics2D) g);
+                 
 //      BORDERS
         g.setColor(Color.yellow);
         g.fillRect(0, 0, 3, 592);
