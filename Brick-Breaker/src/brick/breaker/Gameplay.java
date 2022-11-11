@@ -44,6 +44,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         
     }
 
+//    GAME GRAPHICS
     public void paint(Graphics g){
         
 //      BACKGROUND
@@ -68,19 +69,36 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
+    public void keyTyped(KeyEvent e) {}
     @Override
+    public void keyReleased(KeyEvent e) {}
+    @Override
+    
+//    DETECTING KEY CLICKS
     public void keyPressed(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+//        DETECTING RIGHT KEY CLICK
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+            if(playerX >= 600){
+                playerX = 600;
+            }else{
+                moveRight();
+            }
+            
+        }
+        
+//        DETECTING LEFT KEY CLICK
+        if(e.getKeyCode() == KeyEvent.VK_LEFT){
+            if(playerX < 10){
+                playerX = 10;
+            }else{
+                moveLeft();
+            }
+            
+        }
+        
     }
 
-    @Override
-    public void keyReleased(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
