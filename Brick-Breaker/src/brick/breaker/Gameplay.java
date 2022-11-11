@@ -97,8 +97,16 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
         }
         
     }
-
-
+//  PLAYER MOVES METHODS
+    public void moveRight(){
+        play = true;
+        playerX +=20;
+    }
+    
+    public void moveLeft(){
+        play = true;
+        playerX -=20;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
