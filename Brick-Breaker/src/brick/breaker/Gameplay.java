@@ -17,11 +17,12 @@ import javax.swing.Timer;
  */
 public class Gameplay extends JPanel implements KeyListener, ActionListener{
     
+//    GAME VARIABLES
     private boolean play = false;
     private int score = 0;
     private int totalBricks = 21;
     
-    private Timer time;
+    private Timer timer;
     private int delay = 8;
     
     private int playerX = 310;
@@ -29,6 +30,17 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     private int ballposY = 250;
     private int ballXdir = -1;
     private int ballYdir = -2;
+    
+//    GAME CONSTRUCTOR
+    public Gameplay(){
+        
+        addKeyListener(this);
+        setFocusable(true);
+        setFocusTraversalKeysEnabled(false);
+        timer = new Timer(delay, this);
+        timer.start();
+        
+    }
 
 
     @Override
