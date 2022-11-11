@@ -8,6 +8,6 @@ package brick.breaker;
  *
  * @author Firas
  */
-public class game_play {
+public class Gameplay {
     
 }
