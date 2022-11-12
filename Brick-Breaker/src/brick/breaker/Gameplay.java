@@ -44,7 +44,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 //        CONSTRUCT THE MAP
         map = new MapGenerator(4, 12);
         totalBricks = map.map.length * map.map[0].length;
-        System.out.println(totalBricks);
 
         addKeyListener(this);
         setFocusable(true);
@@ -228,8 +227,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
                 score = 0;
                 map = new MapGenerator(4, 12);
                 totalBricks = map.map.length * map.map[0].length;
-                System.out.println(totalBricks);
-                
                 
                 repaint();
             }

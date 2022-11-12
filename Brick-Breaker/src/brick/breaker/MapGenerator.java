@@ -19,6 +19,7 @@ public class MapGenerator {
     public int brickWidth;
     public int brickHeight;
     
+//  MAP CONSTRUCTOR
     public MapGenerator(int row, int column){
         
         map = new int[row][column];
@@ -32,6 +33,7 @@ public class MapGenerator {
         brickHeight = 150/row;
     }
     
+//  DRAW MAP
     public void draw(Graphics2D g){
         for(int i = 0; i < map.length; i++){
             for(int j = 0; j < map[0].length; j++){
@@ -45,6 +47,8 @@ public class MapGenerator {
             }
         }
     }
+    
+//  SET BRICK VALUE METHOD
     public void setBricksValue(int value, int row, int column){
         map[row][column] = value;
         
